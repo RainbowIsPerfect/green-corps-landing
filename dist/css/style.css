@@ -76,7 +76,7 @@ input {
   -ms-flex-align: center;
   align-items: center;
   padding: 115px 0;
-  background: url("../img/back.png") no-repeat;
+  background: url("../img/back.webp") no-repeat;
   background-position: center;
   background-size: cover;
 }
