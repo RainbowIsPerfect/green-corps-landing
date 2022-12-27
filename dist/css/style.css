@@ -49,15 +49,20 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 20px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  background: none;
+  left: 0;
+  right: 0;
+  -webkit-transition: background-color 0.25s ease, -webkit-box-shadow;
+  transition: background-color 0.25s ease, -webkit-box-shadow;
+  -o-transition: box-shadow, background-color 0.25s ease;
+  transition: box-shadow, background-color 0.25s ease;
+  transition: box-shadow, background-color 0.25s ease, -webkit-box-shadow;
   z-index: 1;
-  background: white;
 }
 .header__logo {
   height: 30px;
@@ -66,6 +71,12 @@ input {
   font-size: 15px;
   margin-right: 25px;
 }
+.header__scrolled {
+  background-color: #fff;
+  -webkit-box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
+  box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
+}
+
 .orb-canvas {
   position: absolute;
   top: 0;
@@ -84,7 +95,7 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 115px 0;
+  padding: 125px 0;
   background: url("../img/back.webp") no-repeat;
   background-position: center;
   background-size: cover;
@@ -486,7 +497,7 @@ input {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-    padding: 50px 10px;
+    padding: 100px 10px;
   }
   .about h1 {
     font-size: 36px;
